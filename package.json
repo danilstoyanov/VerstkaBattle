@@ -6,6 +6,7 @@
     "lint": "npm run lint:styles; npm run lint:scripts",
     "lint:styles": "stylelint src",
     "lint:scripts": "eslint src",
+    "deploy": "gh-pages-deploy",
     "build": "cross-env NODE_ENV=production webpack --config webpack/webpack.config.prod.js --colors",
     "start": "webpack-dev-server --open --config webpack/webpack.config.dev.js"
   },
@@ -25,6 +26,9 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/wbkd/webpack-starter/issues"
+  },
+  "gh-pages-deploy": {
+    "staticpath": "build"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",
